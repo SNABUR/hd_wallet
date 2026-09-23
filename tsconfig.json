@@ -9,11 +9,12 @@
     "sourceMap": true,
     "outDir": "./dist",
     "rootDir": "./src",
+    "types": ["node"],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "scripts/**/*"],
   "exclude": ["node_modules", "dist", "test"]
 }
