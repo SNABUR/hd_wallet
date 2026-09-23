@@ -1,5 +1,4 @@
 {
-  "$schema": "./keys.schema.json",
   "_instructions": "REEMPLAZA ESTOS VALORES CON TUS CLAVES. NUNCA COMPARTAS NI SUBAS ESTE ARCHIVO A CONTROL DE VERSIONES.",
   "defaultChain": "ETH",
   "keys": [
