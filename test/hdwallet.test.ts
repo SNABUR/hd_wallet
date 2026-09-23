@@ -78,6 +78,19 @@ describe('MultiChainHDWallet SDK', () => {
     expect(sui0.address).not.toBe(sui1.address);
   });
 
+  it('derives Supra Move addresses via SLIP-0010 and SHA3-256 AuthKey', () => {
+    const wallet = new MultiChainHDWallet({ mnemonic: testMnemonic });
+    const supra0 = wallet.derive('SUPRA', 0);
+    const supra1 = wallet.derive('SUPRA', 1);
+
+    expect(supra0.chain).toBe('SUPRA');
+    expect(supra0.path).toBe("m/44'/637'/0'/0'/0'");
+    expect(supra0.address.startsWith('0x')).toBe(true);
+    expect(supra0.address.length).toBe(66); // 0x + 64 hex chars
+    expect(supra0.privateKey.startsWith('0x')).toBe(true);
+    expect(supra0.address).not.toBe(supra1.address);
+  });
+
   it('handles batch derivation and CSV/JSON exporting', () => {
     const wallet = new MultiChainHDWallet({ mnemonic: testMnemonic });
     const batch = wallet.deriveBatch('ETH', { start: 0, count: 5 });

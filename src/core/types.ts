@@ -1,4 +1,4 @@
-export type ChainType = 'ETH' | 'BTC' | 'SOL' | 'APTOS' | 'SUI';
+export type ChainType = 'ETH' | 'BTC' | 'SOL' | 'APTOS' | 'SUI' | 'SUPRA';
 
 export type BitcoinAddressFormat = 'segwit' | 'taproot' | 'legacy';
 

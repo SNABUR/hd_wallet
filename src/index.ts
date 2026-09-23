@@ -7,4 +7,5 @@ export * from './chains/btc.js';
 export * from './chains/solana.js';
 export * from './chains/aptos.js';
 export * from './chains/sui.js';
+export * from './chains/supra.js';
 export * from './exporters/export.js';

@@ -4,6 +4,7 @@ import { deriveBTCWallet } from '../chains/btc.js';
 import { deriveSolanaWallet } from '../chains/solana.js';
 import { deriveAptosWallet } from '../chains/aptos.js';
 import { deriveSuiWallet } from '../chains/sui.js';
+import { deriveSupraWallet } from '../chains/supra.js';
 import { walletsToCSV, walletsToJSON } from '../exporters/export.js';
 import {
   BatchDeriveOptions,
@@ -44,6 +45,8 @@ export class MultiChainHDWallet {
         return deriveAptosWallet(this.seed, index);
       case 'SUI':
         return deriveSuiWallet(this.seed, index);
+      case 'SUPRA':
+        return deriveSupraWallet(this.seed, index);
       default:
         throw new Error(`Unsupported blockchain: ${chain}`);
     }
